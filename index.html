@@ -36,4 +36,256 @@
     }
     .tagline {
       text-transform: uppercase;
-      letter-spacing:
+      letter-spacing: 0.18em;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .subhead {
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 640px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: #ffffff05;
+      color: var(--accent);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-top: 10px;
+    }
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #24ff6b;
+      box-shadow: 0 0 8px #24ff6b;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 18px;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: linear-gradient(145deg, #10131b 0, #080a10 100%);
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+      padding: 14px 14px 12px;
+      box-shadow: 0 14px 30px #00000080;
+    }
+    .card h2 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .card small {
+      display: block;
+      color: var(--text-muted);
+      font-size: 11px;
+      margin-bottom: 8px;
+    }
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 6px 0 0;
+      font-size: 14px;
+    }
+    .card ul li {
+      padding: 3px 0;
+      border-bottom: 1px dashed #1f2330;
+    }
+    .card ul li:last-child {
+      border-bottom: none;
+    }
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+    a {
+      color: #ffb38a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .note {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .divider {
+      height: 1px;
+      background: radial-gradient(circle, #ffffff33 0, transparent 70%);
+      opacity: 0.4;
+      margin: 18px 0 10px;
+    }
+    .footer-note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="tagline">716STUFF · OPERATIONS LANE</div>
+      <h1>Scanner Lane</h1>
+      <p class="subhead">
+        Live scanner resources, quick links, and monitoring notes for the 716 region.
+        This mirror is designed for dashboards, embeds, and temporary ops views.
+      </p>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        LIVE MONITORING LANE · 716 REGION
+      </div>
+    </header>
+
+    <main class="grid">
+      <!-- LEFT COLUMN -->
+      <section class="stack">
+        <article class="card">
+          <h2>Live Feeds</h2>
+          <small>Drop in your actual links or feed URLs here.</small>
+          <ul>
+            <li><strong>Erie County Fire</strong> — Broadcastify / primary fire ops</li>
+            <li><strong>Erie County Sheriff</strong> — dispatch / patrol</li>
+            <li><strong>Buffalo Fire</strong> — city fire operations</li>
+            <li><strong>Local EMS</strong> — ambulance / medical</li>
+            <li><strong>Interop / TAC</strong> — regional coordination channels</li>
+          </ul>
+          <p class="note">
+            Replace each line with a direct link (Broadcastify, ProScan, etc.) if you want this page to act as a launchpad.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Radio Reference & Databases</h2>
+          <small>Core references for programming and verification.</small>
+          <ul>
+            <li><strong>Erie County</strong> — RadioReference database</li>
+            <li><strong>Niagara County</strong> — RadioReference database</li>
+            <li><strong>Buffalo City</strong> — city services / public safety</li>
+            <li><strong>Interop / TAC</strong> — shared / regional channels</li>
+            <li><strong>FCC Lookup</strong> — license and frequency search</li>
+          </ul>
+          <p class="note">
+            You can turn each item into a live link once this file is hosted or embedded.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Scanner Lane Notes</h2>
+          <small>Use this block as a rolling log.</small>
+          <div class="label">Today’s focus</div>
+          <ul>
+            <li>Active incidents worth tracking</li>
+            <li>New or changed talkgroups</li>
+            <li>Temporary patches / interop activity</li>
+          </ul>
+          <div class="label">Programming notes</div>
+          <ul>
+            <li>Talkgroups added / removed</li>
+            <li>Alpha tag changes</li>
+            <li>Coverage or reception issues</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <section class="stack">
+        <article class="card">
+          <h2>Unication G5 / Pager Lane</h2>
+          <small>Quick reference for your primary device.</small>
+          <ul>
+            <li><strong>Monitoring profile:</strong> Fire / EMS / Interop</li>
+            <li><strong>Core scan list:</strong> 716 region, county + city</li>
+            <li><strong>Tone-out notes:</strong> add departments / tones here</li>
+            <li><strong>Special lanes:</strong> storms, large incidents, events</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Local Tools</h2>
+          <small>Situational awareness for the 716 lane.</small>
+          <ul>
+            <li>716 weather radar</li>
+            <li>Power outage map</li>
+            <li>Traffic incidents / major closures</li>
+            <li>WNY emergency alerts</li>
+            <li>NWS Buffalo updates</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Technical Lane</h2>
+          <small>How this lane is wired up.</small>
+          <ul>
+            <li><strong>Device:</strong> Unication G5 (plus any other radios)</li>
+            <li><strong>Feed method:</strong> laptop / Pi / dedicated box</li>
+            <li><strong>Software:</strong> ProScan, Broadcastify, or other</li>
+            <li><strong>Antenna:</strong> type, height, location</li>
+            <li><strong>Known dead zones:</strong> list problem areas</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Coverage & Archive</h2>
+          <small>Where this lane reaches and how you log it.</small>
+          <div class="label">Coverage</div>
+          <ul>
+            <li>Southtowns</li>
+            <li>Northtowns</li>
+            <li>Buffalo core</li>
+            <li>Rural fringe</li>
+            <li>Cross-county interop</li>
+          </ul>
+          <div class="label">Archive / logs</div>
+          <ul>
+            <li>Incident logs by date</li>
+            <li>Audio clips (if hosted elsewhere)</li>
+            <li>Notes from previous days</li>
+            <li>Feed / programming change history</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <div class="divider"></div>
+    <div class="footer-note">
+      716STUFF · SCANNER LANE MIRROR · BUILT FOR TEMPORARY EMBEDS AND DASHBOARD OPS
+    </div>
+  </div>
+</body>
+</html>
